@@ -24,8 +24,8 @@ pipeline {
             }
             steps {
 		    unstash "app"
-		    sh 'mvn clean test'
-		    sh 'mvn sonar:sonar \
+		    sh 'mvn clean test -f ./demo/'
+		    sh 'mvn sonar:sonar -f ./demo/ \
   -Dsonar.projectKey=he-arctest \
   -Dsonar.organization=lucienmoor-github \
   -Dsonar.host.url=https://sonarcloud.io \
