@@ -19,7 +19,7 @@ public class HomeController {
         return Integer.toString(addi());
     }
     
-    private int addi() {
+    public int addi() {
     	return 2+2;
     }
 }
