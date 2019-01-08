@@ -8,8 +8,8 @@ pipeline {
               }
             }
             steps {
-		sh 'cd ./demo/'
-		sh 'mvn clean package'
+		//sh 'cd ./demo/'
+		sh 'mvn clean package -f ./demo/'
 		stash name: "app", includes: "**"
 
 
